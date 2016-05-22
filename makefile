@@ -14,4 +14,4 @@ all:
 
 
 SDL_Handler:
-	$(CC) $(project_Main) $(Chip8_reader) $(ops_instruction_set) $(SDL_LINK) -o $(VM).o
+	$(CC) $(project_Main) $(Chip8_reader) $(ops_instruction_set) $(SDL_LINK) -o $(OutputName).o
