@@ -25,8 +25,9 @@ int main(int argc, char * argv[])
     int scale = 8;
 
     // TODO: handle errors
-    SDL_Window* window = SDL_CreateWindow("Chip-8", SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED, WIDTH*scale, HEIGHT*scale, 0);
+    SDL_Window* window = SDL_CreateWindow("Chip-8",
+        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+        WIDTH*scale, HEIGHT*scale, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // TODO: clean up!
@@ -85,8 +86,12 @@ int main(int argc, char * argv[])
             }
         }
 
-        // Chip8_Cycle(&chip8);
+        Chip8_Cycle(&chip8);
+
         // TODO: audio
+        // if (chip8.sound_timer == 0) {
+        //     beep();
+        // }
 
         SDL_SetRenderDrawColor(renderer, 45, 45, 45, 255);
         SDL_RenderClear(renderer);
@@ -101,8 +106,10 @@ int main(int argc, char * argv[])
                 }
             }
         }
+
         SDL_RenderPresent(renderer);
-        // TODO: 1KHZ CPU
+
+        // TODO: Accurate timing; CPU should operate at 1KHz
         SDL_Delay(2);
     }
 

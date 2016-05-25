@@ -62,7 +62,7 @@ void Chip8_Cycle(struct Chip8 * c)
 
     ops[(op & 0xF000) >> 12](c, op);
 
-    // TODO: I don't think this should tick down every cycle
+    // NOTE: I don't think this should tick down every cycle
     if (c->delay_timer > 0) {
         c->delay_timer -= 1;
     }

@@ -3,8 +3,8 @@
 // TODO: is this needed?
 int wait_for_key;
 
-#define u8 unsigned char
-#define u16 unsigned short
+typedef u8 unsigned char
+typedef u16 unsigned char
 
 #define MEMORY_LENGTH 4096
 #define REGISTER_LENGTH 16
