@@ -1,1 +1,1 @@
-# Virtual-machine-By-benhenshaw-
+# Chip-8 Virtual Machine
