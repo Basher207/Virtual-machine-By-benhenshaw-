@@ -1,10 +1,12 @@
 #pragma once
 
+#include <stdint.h>
+
 // TODO: is this needed?
 int wait_for_key;
 
-typedef u8 unsigned char
-typedef u16 unsigned char
+typedef uint8_t u8;
+typedef uint16_t u16;
 
 #define MEMORY_LENGTH 4096
 #define REGISTER_LENGTH 16
