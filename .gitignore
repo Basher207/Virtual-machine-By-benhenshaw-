@@ -1,4 +1,6 @@
-*.o
-*.exe
-.DS_STORE
-build/
+*
+!*/
+!*.c
+!*.sh
+!*.md
+!.gitignore
